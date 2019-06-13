@@ -76,29 +76,44 @@ h1, h2, h3, h4, h5 {
 		text-align: center;
     }
 
-	.logo {
+	header nav .logo {
 		display: flex;
-		flex-direction: column;
+		order: 1;
+		margin-bottom: 25px;
 		margin: auto;
-		margin-bottom: 35px;
 	}
 
-    .container header nav a {
+	header nav ul {
+		order: 2;
+	}
+
+	.container header nav a {
         display: flex;
         flex-direction: column;
-        list-style-type: underline;
+        text-decoration: none;
         margin: 0 auto;
         color: #444;
         text-align: center;
-        padding: 20px;
+		padding: 20px;
+		order: 2;
     }
 
     .container header ul {
-        list-style-type: underline;
         display: flex;
         flex-direction: column;
-        margin: auto;
-    }
+		margin: 0 auto;
+		order: 2;
+	}
+	
+	ul li:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 90%;
+		margin: 10px;
+		background: #444;
+		order: 2;
+	}
 
     .text-left {
 		font-size: 3rem;
@@ -108,7 +123,8 @@ h1, h2, h3, h4, h5 {
     .top-content {
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
+		margin: 0 auto;
+		text-align: center;
     }
 
     .img-right {
@@ -130,11 +146,12 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     }
 
-    .img-center {
+	#imgcenter {
 		display: flex;
 		padding: 20px;
-		width: 750px;
-		height: 100px;
+		width: 95%;
+		height: 150px;
+		margin: 0 auto;
 	}
 	
 	button {
@@ -169,7 +186,18 @@ h1, h2, h3, h4, h5 {
 	h1, h2 {
 		font-size: 5rem;
 	}
+
+	.top-content {
+        display: flex;
+        flex-direction: row;
+		margin: 0 auto;
+		text-align: center;
+	}
 	
+	.text-left {
+        margin: 0 auto;
+	}
+
 	ul {
 		list-style-type: none;
 		display: flex;
@@ -191,6 +219,10 @@ h1, h2, h3, h4, h5 {
 	li a:hover {
 		background-color: silver;
 	  }
+
+	.img-right {
+        display: none;
+    }
 	
 	.top-content {
 		display: flex;
@@ -211,6 +243,14 @@ h1, h2, h3, h4, h5 {
 	button:hover {
 		background-color: #444;
 	  }
+	}
+
+	#imgcenter {
+		display: flex;
+		padding: 20px;
+		width: 95%;
+		height: 150px;
+		margin: 0 auto;
 	}
 
 @media screen and (min-width: 961px) {
@@ -314,10 +354,11 @@ button:hover {
 	height: 150px;
 }
 
-.img-center {
-	margin: auto;
-	display: block;
-	width: 790px;
+#imgcenter {
+	display: flex;
+	padding: 20px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .main-content-2 {
