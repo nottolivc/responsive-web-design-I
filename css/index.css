@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+
 /* Your code starts here! */
 
 /* for mobile phone screens*/
@@ -75,35 +76,33 @@ h1, h2, h3, h4, h5 {
 		padding: 25px;
 		text-align: center;
     }
+	
 
-	header nav .logo {
-		display: flex;
-		order: 1;
-		margin-bottom: 25px;
-		margin: auto;
+	.logo {
+		order: -1;
+		padding: 20px;
 	}
 
-	header nav ul {
-		order: 2;
+	nav ul {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: 20px;
+		text-decoration: none;
+		max-width: 767px; 
+		padding: 20px;
+		margin: auto;
+	
 	}
 
 	.container header nav a {
-        display: flex;
         flex-direction: column;
         text-decoration: none;
         margin: 0 auto;
         color: #444;
         text-align: center;
 		padding: 20px;
-		order: 2;
+		align-items: column-reverse;
     }
-
-    .container header ul {
-        display: flex;
-        flex-direction: column;
-		margin: 0 auto;
-		order: 2;
-	}
 	
 	ul li:after {
 		content: "";
@@ -112,12 +111,10 @@ h1, h2, h3, h4, h5 {
 		width: 90%;
 		margin: 10px;
 		background: #444;
-		order: 2;
 	}
 
     .text-left {
 		font-size: 3rem;
-
 	}
 
     .top-content {
@@ -135,6 +132,12 @@ h1, h2, h3, h4, h5 {
         display: flex;
         flex-direction: column;
     }
+
+
+	hr {
+		flex-direction: row;
+		color: #444;
+	}
 
     .main-content-2 {
         display: flex;
